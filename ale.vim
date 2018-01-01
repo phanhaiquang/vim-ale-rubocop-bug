@@ -18,4 +18,9 @@ let g:ale_linters = {}
 let g:ale_fixers['ruby'] = ['rubocop']
 let g:ale_linters['ruby'] = ['rubocop']
 let g:ale_ruby_rubocop_executable = 'bundle'
+
+" FAIL: this setting causes ALE does not show Error
 let g:ale_ruby_rubocop_options = '--display-cop-names --rails --auto-correct '
+
+" PASS: this setting causes ALE does not show Error
+let g:ale_ruby_rubocop_options = '--display-cop-names --rails '
